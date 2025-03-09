@@ -70,11 +70,14 @@ else()
     target_link_libraries(glomap PUBLIC colmap)
 endif()
 
-if(NOT FETCH_POSELIB)
-    target_link_libraries(glomap PUBLIC PoseLib::PoseLib)
-else()
-    target_link_libraries(glomap PUBLIC PoseLib)
-endif()
+# if(NOT FETCH_POSELIB)
+#     target_link_libraries(glomap PUBLIC PoseLib::PoseLib)
+# else()
+#     target_link_libraries(glomap PUBLIC PoseLib)
+# endif()
+
+target_link_libraries(glomap PUBLIC PoseLib::PoseLib)
+
 
 target_link_libraries(
     glomap

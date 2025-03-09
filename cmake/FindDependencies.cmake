@@ -21,19 +21,21 @@ if(TESTS_ENABLED)
 endif()
 
 include(FetchContent)
-FetchContent_Declare(PoseLib
-    GIT_REPOSITORY    https://github.com/PoseLib/PoseLib.git
-    GIT_TAG           0439b2d361125915b8821043fca9376e6cc575b9
-    EXCLUDE_FROM_ALL
-    SYSTEM
-)
-message(STATUS "Configuring PoseLib...")
-if (FETCH_POSELIB) 
-    FetchContent_MakeAvailable(PoseLib)
-else()
-    find_package(PoseLib REQUIRED)
-endif()
-message(STATUS "Configuring PoseLib... done")
+# FetchContent_Declare(PoseLib
+#     GIT_REPOSITORY    https://github.com/PoseLib/PoseLib.git
+#     GIT_TAG           0439b2d361125915b8821043fca9376e6cc575b9
+#     EXCLUDE_FROM_ALL
+#     SYSTEM
+# )
+# message(STATUS "Configuring PoseLib...")
+# if (FETCH_POSELIB) 
+#     FetchContent_MakeAvailable(PoseLib)
+# else()
+#     find_package(PoseLib REQUIRED)
+# endif()
+# message(STATUS "Configuring PoseLib... done")
+
+find_package(PoseLib REQUIRED)
 
 FetchContent_Declare(COLMAP
     GIT_REPOSITORY    https://github.com/colmap/colmap.git
